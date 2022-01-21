@@ -3,15 +3,15 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Decoders" href="decoders.html" /><link rel="prev" title="deqr 0.2.0.post6+034f14b" href="index.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Decoders" href="decoders.html" /><link rel="prev" title="deqr 0.2.0.post10+bdf5d51" href="index.html" />
 
-    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+    <meta name="generator" content="sphinx-4.4.0, furo 2022.01.02"/>
         <title>Getting Started - deqr</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=df49af52631e7917044a9c21a57f7b83170a6dd0" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=fade93df149f7c5fedb3ff897f799dc7d283b420" />
     
     
 
@@ -158,6 +158,7 @@
 <div id="searchbox"></div><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="#a-basic-exmaple">A Basic Exmaple</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="#decoding-from-an-image">Decoding From an Image</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#visualizing-the-results">Visualizing the Results</a></li>
@@ -227,6 +228,14 @@
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <p>If you already have an image containing a QR code that you’d like to decode, the
 process is pretty straightforward.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">deqr</span></code> is published on PyPi with pre-built binaries for common platforms and
+modern Python versions. It can be installed with <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">deqr</span>
+</pre></div>
+</div>
+</section>
 <section id="a-basic-exmaple">
 <h2>A Basic Exmaple<a class="headerlink" href="#a-basic-exmaple" title="Permalink to this headline">¶</a></h2>
 <section id="decoding-from-an-image">
@@ -371,7 +380,7 @@ we show off the information we just decoded.</p>
 <p>If your source image is encoded as grayscale, you will not be able to draw
 colored annotations on it without first converting it into a colorspace
 with color channels. See the documentation of the annotation tool you are
-using (e.g. <a class="reference external" href="https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.convert" title="(in Pillow (PIL Fork) v8.4.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PIL.Image.Image.convert()</span></code></a>) for instruction on how to
+using (e.g. <a class="reference external" href="https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.convert" title="(in Pillow (PIL Fork) v9.0.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PIL.Image.Image.convert()</span></code></a>) for instruction on how to
 accomplish that.</p>
 </div>
 <div class="tab-set docutils container">
@@ -752,6 +761,8 @@ process without being copied.</p>
         </div>
 
         <div class="related-information">
+          Created using <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
         </div>
         
       </footer>
@@ -766,7 +777,7 @@ process without being copied.</p>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/main.js"></script>
+    <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/tabs.js"></script>
