@@ -2,9 +2,12 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="#" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="API Reference" href="api-reference.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/><title>Search - deqr</title><link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
+        <title>Development Tips and Tricks - deqr</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
@@ -147,7 +150,7 @@
   
   <span class="sidebar-brand-text">deqr</span>
   
-</a><form class="sidebar-search-container" method="get" action="#" role="search">
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
@@ -159,8 +162,8 @@
 <li class="toctree-l1"><a class="reference internal" href="api-reference.html">API Reference</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="development.html">How-To</a></li>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">How-To</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/torque/deqr">Git Repository</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/torque/deqr/issues">Bug Tracker</a></li>
 </ul>
@@ -180,7 +183,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -194,17 +198,21 @@
           </label>
         </div>
         <article role="main">
-          
-<noscript>
-<div class="admonition error">
-  <p class="admonition-title">Error</p>
-  <p>
-    Please activate JavaScript to enable the search functionality.
-  </p>
-</div>
-</noscript>
-
-<div id="search-results"></div>
+          <section id="development-tips-and-tricks">
+<h1>Development Tips and Tricks<a class="headerlink" href="#development-tips-and-tricks" title="Permalink to this headline">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">deqr</span></code> uses <a class="reference external" href="https://github.com/python-poetry/poetry">poetry</a> for dependency management and as its build system. For
+development, it can be installed with the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code>, which will haul
+in the development dependencies because <code class="docutils literal notranslate"><span class="pre">deqr</span></code> has no standard dependencies. These
+dependencies are listed in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>.</p>
+<p>Alternately, <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code> also ought to work because Poetry exposes a PEP 517 build
+backend, but this will not also automatically the development dependencies. If not all
+development dependencies are desired, this is the easiest way to go about skipping
+them.</p>
+<p>Since <code class="docutils literal notranslate"><span class="pre">deqr</span></code> is a <a class="reference external" href="https://github.com/cython/cython">Cython</a> wrapper around some C libraries, poetry delegates
+compilation to Cython via a setuptools build extension, which is stored in <code class="docutils literal notranslate"><span class="pre">build.py</span></code>
+in the root of the repository.  When adding or removing Cython-compiled modules, that
+file must be updated.</p>
+</section>
 
         </article>
       </div>
@@ -212,7 +220,17 @@
         
         <div class="related-pages">
           
-          
+          <a class="prev-page" href="api-reference.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">API Reference</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -243,8 +261,5 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/tabs.js"></script>
-    
-<script src="_static/searchtools.js"></script>
-<script src="_static/language_data.js"></script>
-<script src="searchindex.js"></script></body>
+    </body>
 </html>
