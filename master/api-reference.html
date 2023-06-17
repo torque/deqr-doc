@@ -540,9 +540,9 @@ decoders can understand. Images are converted to 8-bytes-per-pixel
 grayscale and ordered as a 1-dimensional row-major array of data.</p>
 <p>To avoid unnecessary hard dependencies on large external libraries, the
 source format of provided data is inferred by inspecting the object’s type
-description. Supported source formats include the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>
+description. Supported source formats include the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.25)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>
 used by numpy and OpenCV, the <code class="xref py py-class docutils literal notranslate"><span class="pre">cv2.UMat</span></code> format from OpenCV (this is
-converted to a <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>), the <a class="reference external" href="https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image" title="(in Pillow (PIL Fork) v9.5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.Image.Image</span></code></a> format
+converted to a <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.25)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>), the <a class="reference external" href="https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image" title="(in Pillow (PIL Fork) v9.5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.Image.Image</span></code></a> format
 used by Pillow, or, if all else fails, a
 <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[bytes,</span> <span class="pre">tuple[int,</span> <span class="pre">int]]</span></code> containing a pre-converted bytes
 object and its associated width, height pair.</p>
@@ -550,7 +550,7 @@ object and its associated width, height pair.</p>
 <p class="admonition-title">Warning</p>
 <p>It is strongly discouraged to access any of the properties of this class
 after it has been created. <a class="reference internal" href="#deqr.image.ImageLoader.data" title="deqr.image.ImageLoader.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ImageLoader.data</span></code></a> uses a different
-backing class depending on the source type (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> when
+backing class depending on the source type (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.25)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> when
 coming from numpy or OpenCV, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytearray" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> otherwise) and the QR
 code decoders may do in-place manipulation of the data (e.g. the
 binarization routine manipulates the data in place).</p>
@@ -569,7 +569,7 @@ binarization routine manipulates the data in place).</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="deqr.image.ImageLoader.data">
-<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytearray" title="(in Python v3.11)"><span class="pre">bytearray</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deqr.image.ImageLoader.data" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytearray" title="(in Python v3.11)"><span class="pre">bytearray</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.25)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deqr.image.ImageLoader.data" title="Permalink to this definition">#</a></dt>
 <dd><p>The image binary data.</p>
 </dd></dl>
 
